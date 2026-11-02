@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="10.0.11" />
+  </ItemGroup>
+
+  <!-- Launcher ayrı bir projedir; ana uygulamanın kaynak taramasına girmemeli. -->
+  <ItemGroup>
+    <Compile Remove="Launcher/**" />
+    <Page Remove="Launcher/**" />
+    <None Remove="Launcher/**" />
+  </ItemGroup>
+
+</Project>
